@@ -1,0 +1,177 @@
+/**
+ * Estilos para el componente TarjetaPersonal
+ * 
+ * Define la apariencia de la tarjeta personal con:
+ * - Tarjeta centrada en pantalla
+ * - Fondo blanco
+ * - Bordes redondeados
+ * - Sombra suave
+ * - Imagen circular
+ * - Botón con efecto hover
+ */
+
+/* Contenedor principal que centra la tarjeta */
+.contenedor-tarjeta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+/* Estilos de la tarjeta */
+.tarjeta {
+  background-color: white;
+  border-radius: 15px;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover en la tarjeta */
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagen de perfil - Circular */
+.foto-perfil {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #667eea;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.foto-perfil:hover {
+  transform: scale(1.05);
+}
+
+/* Contenedor de información personal */
+.info-personal {
+  margin: 25px 0;
+}
+
+/* Nombre - Encabezado principal */
+.nombre {
+  font-size: 28px;
+  color: #333;
+  margin: 0 0 20px 0;
+  font-weight: 700;
+}
+
+/* Cada detalle (edad, carrera, color favorito) */
+.detalle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+}
+
+.detalle:last-of-type {
+  border-bottom: none;
+}
+
+/* Etiqueta en los detalles */
+.etiqueta {
+  font-weight: 600;
+  color: #667eea;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+/* Valor de los detalles */
+.valor {
+  color: #666;
+  font-weight: 500;
+}
+
+/* Botón de contacto */
+.btn-contacto {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Efecto hover del botón */
+.btn-contacto:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+/* Efecto activo del botón */
+.btn-contacto:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(102, 126, 234, 0.4);
+}
+
+/* Responsive - Tabletas */
+@media (max-width: 768px) {
+  .tarjeta {
+    padding: 30px 20px;
+    max-width: 90%;
+  }
+
+  .nombre {
+    font-size: 24px;
+  }
+
+  .foto-perfil {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Responsive - Móviles */
+@media (max-width: 480px) {
+  .contenedor-tarjeta {
+    padding: 10px;
+  }
+
+  .tarjeta {
+    padding: 20px 15px;
+    border-radius: 12px;
+  }
+
+  .nombre {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .foto-perfil {
+    width: 100px;
+    height: 100px;
+  }
+
+  .detalle {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+
+  .btn-contacto {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
